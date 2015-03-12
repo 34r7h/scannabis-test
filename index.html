@@ -5,11 +5,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="bower_components/foundation/js/foundation.js"></script>
+<script src="bower_components/qrcode-generator/js/qrcode.js"><script>
+<script src="bower_components/angular-qrcode/qrcode.js"></script>
 <meta name="google-site-verification" content="Bq1RzupGiIVzp37ShlTEEt7Uv68fJOIT7BrHE9Xbs1c" />
 </head>
 <body ng-controller="scanCtrl">
 <div style="display:table; height: 80%; vertical-align:middle; text-align:center; width:100%;"><div style="background:rgba(10,30,15,.75); display:table-cell; vertical-align:middle;">
-<h1 style="color:rgba(245,255,250, .95)"><a style="color:rgba(245,255,250, .95)" href='/'>SCANNABIS</a></h1>
+<h1 style="color:rgba(245,255,250, .95)"><a style="color:rgba(245,255,250, .95)" href='/'><i class="fa fa-2x fa-qrcode" ><i><qrcode data="http://scannabis.com" href="http://scannabis.com"></qrcode> SCANNABIS</a></h1>
 <p style="color:rgba(225,245,230, .62)">Hi, let's blaze.</p>
 <br>
 <a ui-sref="{{feature.url}}"  ng-repeat="feature in features" style="box-shadow:0px 0px 6px 10px rgba(0,20,8,.6); display: inline-block; width:320px; max-width:100%; padding:2em; margin: 2em 2em 0; list-style:none; background:rgba(245,255,250,1);">
@@ -21,7 +23,7 @@
 </div></div>
 <div ui-view class="panel panel-default" style="color: rgba(10,30,15,.95); height:20%;"/>
 <script>
-var app = angular.module('scannabis',['ui.router']);
+var app = angular.module('scannabis',['ui.router','monospaced.qrcode']);
 app.config(function($stateProvider, $locationProvider){
 	$locationProvider.hashPrefix('!');
 	$stateProvider.state('scan', {
