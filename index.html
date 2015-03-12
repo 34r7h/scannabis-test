@@ -11,16 +11,16 @@
 <meta name="google-site-verification" content="Bq1RzupGiIVzp37ShlTEEt7Uv68fJOIT7BrHE9Xbs1c" />
 </head>
 <body ng-controller="scanCtrl">
-<div style="display:table; height: 80%; vertical-align:middle; text-align:center; width:100%;"><div style="background:rgba(0,1,0,.95); display:table-cell; vertical-align:middle;">
+<div style="display:table; height: 80%; vertical-align:middle; text-align:center; width:100%;"><div style="background:rgba(0,1,0,.90); display:table-cell; vertical-align:middle;">
 
 	<h1 style="color:rgba(245,255,250, .95)">
 
-		<a class="fa-2x" style="color:rgba(245,255,250, .95); text-shadow:10px 10px 6px rgba(0,2,0,.9)" href='/'>
+		<a class="fa-2x" style="color:rgba(245,255,250, .95); text-shadow:10px 10px 6px rgba(0,2,0,.95)" href='/'>
 		<qrcode version="2" error-correction-level="M" size="62" data="http://scannabis.com"></qrcode>SCANNABIS</a>
 	</h1>
 <p style="color:rgba(225,245,230, .62)">Hi, let's blaze.</p>
 <br>
-<a ui-sref="{{feature.url}}"  ng-repeat="feature in features" style="box-shadow:10px 10px 2px 6px rgba(0,2,0,.9); display: inline-block; width:320px; max-width:100%; padding:2em; margin: 2em 2em 0; list-style:none; background:rgba(245,255,250,1);">
+<a ui-sref="{{feature.url}}"  ng-repeat="feature in features" style="box-shadow:10px 10px 2px 6px rgba(0,2,0,.95); display: inline-block; width:320px; max-width:100%; padding:2em; margin: 2em 2em 0; list-style:none; background:rgba(245,255,250,1);">
         <span style="text-shadow:-1px -1px 5px #fff; color:rgba(10,30,15,.95)">
                 <i style="text-shadow:2px 2px 5px rgba(0,2,0,.9)" class="fa-4x {{feature.icon}}"></i>
                 <h3>{{feature.name}}</h3>
